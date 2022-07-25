@@ -1,0 +1,110 @@
+.container {
+  margin: 200px 165px;
+  display: flex;
+  justify-content: center;
+
+  .img-container {
+    height: 720px;
+    width: 635px;
+    background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .text {
+    max-width: 700px;
+    position: relative;
+    padding: 160px 0 0 182px;
+    background-color: #fff;
+    align-self: flex-end;
+    margin-left: -200px;
+    h3 {
+      position: absolute;
+      top: -100px;
+      left: -200px;
+      color: orange;
+      font-size: 250px;
+      font-weight: 700;
+      line-height: 200px;
+      letter-spacing: -5px;
+      text-align: right;
+    }
+
+    h4 {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: -2px;
+      text-align: left;
+      margin-bottom: 35px;
+    }
+
+    p {
+      color: #60636d;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 200px 100px;
+    .text {
+      padding: 100px 0 0 112px;
+
+      h3 {
+        left: -60px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    .img-container {
+      flex-basis: 1000px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin: 150px 50px;
+
+    .img-container {
+      display: none;
+    }
+    h3 {
+      display: none;
+    }
+
+    .text {
+      padding: 0;
+      margin-left: 0;
+
+      h4 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+// <div className={classes.container}>
+//       <div className={classes["img-container"]}></div>
+//       <div className={classes.text}>
+//         <h3>About</h3>
+//         <h4>Tell us about your project</h4>
+//         <p>
+//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+//           voluptas cum, amet dicta ea cumque temporibus blanditiis distinctio
+//           sed illum sint deleniti totam, tempora eos? Quas optio veritatis
+//           commodi debitis.
+//         </p>
+//       </div>
+//     </div>

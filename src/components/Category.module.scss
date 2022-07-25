@@ -1,0 +1,63 @@
+.container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h4 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: white;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  transition: all 0.3s;
+}
+
+.container a:hover {
+  border-bottom: 1px solid orange;
+}
+
+.container a span {
+  color: orange;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    h4 {
+      font-size: 27px;
+      line-height: 27px;
+    }
+
+    a {
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 15px;
+    }
+  }
+}
+
+// <div className={classes.container}>
+//   <h4>{title}</h4>
+//   <Link to={link}>
+//     discover more <span>&gt;</span>
+//   </Link>
+// </div>

@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  gap: 125px;
+  margin: 200px 165px;
+}
+
+.container h2 {
+  position: absolute;
+  color: orange;
+  font-size: 250px;
+  font-weight: 700;
+  line-height: 200px;
+  letter-spacing: -5px;
+  text-align: left;
+  top: -130px;
+  left: 130px;
+}
+
+.container .text {
+  margin-top: 73px;
+  max-width: 450px;
+}
+
+.container .text h4 {
+  margin-bottom: 43px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.container .text p {
+  color: #60636d;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.container .image-container {
+  width: 350px;
+  background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// <section className={classes.container}>
+//     <h2>Welcome</h2>
+//     <div className={classes.text}>
+//       <h4>Welcome to Arch Studio</h4>
+//       <p>
+//         We have a unique network and skillset to help bring your projects to
+//         life. Our small team of highly skilled individuals combined with our
+//         large network put us in a strong position to deliver exceptional
+//         results. <br />
+//         <br />
+//         Over the past 10 years, we have worked on all kinds of projects.
+//         From stations to high-rise buildings, we create spaces that inspire
+//         and delight. <br />
+//         <br />
+//         We work closely with our clients so that we understand the
+//         intricacies of each project. This allows us to work in harmony the
+//         surrounding area to create truly stunning projects that will stand
+//         the test of time.
+//       </p>
+//     </div>
+//     <div className={classes["image-container"]}></div>
+//   </section>
+
+@media only screen and (max-width: 1400px) {
+  .container h2 {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    margin: 200px 100px;
+    gap: 50px;
+
+    h2 {
+      font-size: 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+
+    h2 {
+      font-size: 150px;
+    }
+
+    .text {
+      max-width: none;
+    }
+
+    .image-container {
+      width: initial;
+      height: 350px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin: 150px 50px;
+
+    h2 {
+      display: none;
+      font-size: 54px;
+      line-height: 54px;
+    }
+
+    .text {
+      margin-top: 0;
+    }
+  }
+}

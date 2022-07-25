@@ -1,0 +1,59 @@
+.container {
+  position: relative;
+  button {
+    padding: 16px 24px;
+    background: #ffffff;
+
+    border: none;
+    width: 200px;
+    color: #111517;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    width: 200px;
+    position: absolute;
+    top: 55px;
+    left: 0;
+
+    button:hover {
+      background: #cecece;
+    }
+  }
+}
+
+// <div className={classes.container}>
+//       <button>
+//         Filter by{" "}
+//         <span>
+//           <img src="assets/icons/arrow-down.svg" alt="" />
+//         </span>
+//       </button>
+//       <div className={classes.filters}>
+//         <button>Filter1</button>
+//         <button>Filter1</button>
+//         <button>Filter1</button>
+//         <button>Filter1</button>
+//       </div>
+//     </div>

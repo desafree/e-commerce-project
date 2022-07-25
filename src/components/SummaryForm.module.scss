@@ -1,0 +1,121 @@
+.container {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 350px;
+
+  button {
+    width: 100%;
+    padding: 15px 0;
+    background-color: orange;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+  }
+
+  .final {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 32px;
+
+    h5 {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-bottom: 8px;
+      opacity: 0.5;
+      text-transform: uppercase;
+
+      &.price {
+        opacity: 1;
+        color: orange;
+      }
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1.2857142686843872px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    h5 {
+      opacity: 0.5;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+
+    h5.price {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// <div className={classes.container}>
+//       <h3>Summary</h3>
+//       <div className={classes.items}>
+//         <SummaryItem></SummaryItem>
+//         <SummaryItem></SummaryItem>
+//         <SummaryItem></SummaryItem>
+//       </div>
+//       <div className={classes.row}>
+//         <h5>Total</h5>
+//         <h5 className={classes.price}>$195</h5>
+//       </div>
+//       <div className={classes.row}>
+//         <h5>Total</h5>
+//         <h5 className={classes.price}>$195</h5>
+//       </div>
+//       <div className={classes.row}>
+//         <h5>Total</h5>
+//         <h5 className={classes.price}>$195</h5>
+//       </div>
+//       <div className={classes["row final"]}>
+//         <h5>Total</h5>
+//         <h5 className={classes.price}>$195</h5>
+//       </div>
+//       <button>checkout</button>
+//     </div>

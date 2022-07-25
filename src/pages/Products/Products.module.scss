@@ -1,0 +1,15 @@
+.container {
+  padding: 200px 165px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 200px 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    padding: 150px 50px;
+  }
+}

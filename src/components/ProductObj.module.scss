@@ -1,0 +1,232 @@
+.container {
+  margin: 300px 165px 200px;
+  display: flex;
+  justify-content: center;
+  gap: 125px;
+
+  button {
+    cursor: pointer;
+  }
+
+  .images {
+    .image-container {
+      margin-bottom: 30px;
+      border-radius: 15px;
+      width: 445px;
+      height: 445px;
+      background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 30px;
+
+      img {
+        border-radius: 10px;
+        height: 88px;
+        width: 88px;
+      }
+    }
+  }
+
+  .text {
+    max-width: 450px;
+    h5 {
+      color: orange;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-align: left;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #69707d;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .price {
+      margin-bottom: 30px;
+      .total {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        h4 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 35px;
+          letter-spacing: 0px;
+          text-align: left;
+        }
+
+        h5 {
+          color: orange;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0px;
+          text-align: left;
+          padding: 4px 10px;
+          background: #ffeee2;
+          border-radius: 6px;
+          margin-bottom: 0;
+        }
+      }
+
+      h6 {
+        color: #b6bcc8;
+        text-decoration: line-through;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+    }
+  }
+
+  .cart-actions {
+    display: flex;
+    gap: 16px;
+
+    .quantity {
+      width: 157px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #f6f8fd;
+      border-radius: 10px;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: orange;
+        font-size: 27px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+      }
+    }
+
+    .addCart {
+      height: 80px;
+      padding: 20px 77px;
+      background: orange;
+      box-shadow: 0px 20px 50px -20px #ff7e1b;
+      border-radius: 10px;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0px;
+      text-align: left;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .container .cart-actions {
+    flex-direction: column;
+    .addCart {
+      align-self: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    margin: 300px 100px 200px;
+
+    .cart-actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .images {
+      margin: 0 auto;
+    }
+
+    .text {
+      max-width: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin: 250px 50px 150px;
+
+    .cart-actions {
+      flex-direction: column;
+    }
+
+    .images {
+      .image-container {
+        width: 100%;
+        height: 330px;
+      }
+
+      .gallery {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+// <main className={classes.container}>
+
+//         <div className={classes["cart-actions"]}>
+//           <div className={classes.quantity}>
+//             <button>-</button>
+//             <h4>0</h4>
+//             <button>+</button>
+//           </div>
+//           <button>
+//             {" "}
+//             <img src="./assets/icons/cart.svg" alt="" /> Add to cart
+//           </button>
+//         </div>
+//       </div>
+//     </main>

@@ -1,0 +1,79 @@
+.navigation {
+  padding: 56px 165px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 94px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.navigation .logo {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  margin-right: auto;
+}
+
+.navigation li a {
+  color: #7d828f;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.cart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    padding: 10px;
+    box-sizing: content-box;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navigation {
+    padding: 56px 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navigation {
+    display: none;
+  }
+}
+
+// <nav className={classes.navigation}>
+//   <Link to="/">Logo</Link>
+//   <ul>
+//     <li>
+//       <Link to="link1">Link1</Link>
+//     </li>
+//     <li>
+//       <Link to="link1">Link1</Link>
+//     </li>
+//     S
+//     <li>
+//       <Link to="link1">Link1</Link>
+//     </li>
+//   </ul>
+// </nav>

@@ -1,0 +1,74 @@
+.header {
+  background-color: rgba(128, 128, 128, 0.158);
+}
+
+.header .text {
+  padding-top: 390px;
+  padding-left: 165px;
+  padding-bottom: 180px;
+}
+
+.text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.text p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header .text {
+    padding-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header .text {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    padding: 150px 50px;
+    text-align: center;
+
+    .text {
+      padding: 0;
+    }
+  }
+}
+// <head>
+//     <div className={classes.text}>
+//       <h5>new product</h5>
+//       <h1>Lorem ipsum dolor sit.</h1>
+//       <p>
+//         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+//         itaque esse alias.
+//       </p>
+//       <Button></Button>
+//     </div>
+//   </head>

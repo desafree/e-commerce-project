@@ -1,0 +1,133 @@
+.container {
+  padding: 54px 48px;
+  background: #ffffff;
+  border-radius: 8px;
+  max-width: 730px;
+
+  p {
+    opacity: 0.5;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1.1428571939468384px;
+    text-align: left;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .billing,
+  .shipping {
+    margin-bottom: 50px;
+
+    h4 {
+      color: orange;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 25px;
+      letter-spacing: 0.9285714030265808px;
+      text-align: left;
+      margin-bottom: -10px;
+    }
+
+    .inputs-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .input-container {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+
+        label {
+          text-transform: capitalize;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          letter-spacing: -0.2142857164144516px;
+          text-align: left;
+          margin-bottom: 9px;
+        }
+
+        input {
+          padding: 18px 24px;
+          background: #ffffff;
+          border: 1px solid #cfcfcf;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 19px;
+          letter-spacing: -0.25px;
+          text-align: left;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    padding: 25px;
+    width: 100%;
+    .billing,
+    .shipping {
+      .inputs-container {
+        display: initial;
+      }
+    }
+  }
+}
+// <form className={classes.container}>
+//       <h3>Checkout</h3>
+//       <div className={classes.billing}>
+//         <h4>Billing details</h4>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//       </div>
+
+//       <div className={classes.shipping}>
+//         <h4>Shipping info</h4>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//         <div className={classes["input-container"]}>
+//           <label htmlFor="name">Name</label>
+//           <input type="text" />
+//         </div>
+//       </div>
+//     </form>

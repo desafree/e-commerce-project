@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  img {
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+  }
+
+  .info {
+    margin-right: auto;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+
+    .price {
+      opacity: 0.5;
+    }
+  }
+
+  .cart-action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 96px;
+    height: 32px;
+    background: #f1f1f1;
+
+    button {
+      opacity: 0.3;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-align: center;
+      border: none;
+    }
+
+    h6 {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+}
+
+// <div className={classes.container}>
+//       <img src="assets/home/desktop/image-hero-federal.jpg" alt="" />
+//       <div className={classes.info}>
+//         <h5>Product</h5>
+//         <h5 className={classes.price}>$195</h5>
+//       </div>
+//       <div className={classes["cart-action"]}>
+//         <button>-</button>
+//         <h6>1</h6>
+//         <button>-</button>
+//       </div>
+//     </div>
