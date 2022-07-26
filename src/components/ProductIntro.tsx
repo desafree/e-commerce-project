@@ -1,18 +1,26 @@
+import { FC } from "react";
 import classes from "./ProductIntro.module.scss";
+import product from "../typescript/interface/product";
 
-const ProductIntro = () => {
+interface Props {
+  item: product[];
+}
+
+const ProductIntro: FC<Props> = ({ item }) => {
+  const [product] = item;
+
   return (
     <div className={classes.container}>
-      <div className={classes["img-container"]}></div>
+      <div
+        className={classes["img-container"]}
+        style={{
+          backgroundImage: `url("/${product.categoryImg}")`,
+        }}
+      ></div>
       <div className={classes.text}>
         <h3>About</h3>
-        <h4>Tell us about your project</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-          voluptas cum, amet dicta ea cumque temporibus blanditiis distinctio
-          sed illum sint deleniti totam, tempora eos? Quas optio veritatis
-          commodi debitis.
-        </p>
+        <h4>{product.categoryAbout.title}</h4>
+        <p>{product.categoryAbout.text}</p>
       </div>
     </div>
   );

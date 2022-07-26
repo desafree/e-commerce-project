@@ -1,31 +1,41 @@
 import classes from "./ProductObj.module.scss";
+import product from "../typescript/interface/product";
+import { FC } from "react";
 
-const ProductObj = () => {
+interface Props {
+  item: product[];
+}
+
+const ProductObj: FC<Props> = ({ item }) => {
+  const [product] = item;
+  console.log(product);
+
   return (
     <main className={classes.container}>
       <div className={classes.images}>
-        <div className={classes["image-container"]}></div>
+        <div
+          className={classes["image-container"]}
+          style={{
+            backgroundImage: `url(/${product.img[0]})`,
+          }}
+        ></div>
         <div className={classes.gallery}>
-          <img src="/assets/home/desktop/image-hero-federal.jpg" alt="" />
-          <img src="/assets/home/desktop/image-hero-federal.jpg" alt="" />
-          <img src="/assets/home/desktop/image-hero-federal.jpg" alt="" />
-          <img src="/assets/home/desktop/image-hero-federal.jpg" alt="" />
+          {product.img.map((imgUrl, index) => {
+            if (index === 0) return;
+            return <img src={`/${imgUrl}`} alt="" key={index} />;
+          })}
         </div>
       </div>
       <div className={classes.text}>
-        <h5>Sneakers company</h5>
-        <h2>Fall limited Edition sneakers</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
-          quo quae quaerat quasi voluptatum necessitatibus voluptatem iste
-          ullam. Quaerat, incidunt?
-        </p>
+        <h5>{product.categoryName}</h5>
+        <h2>{product.itemName}</h2>
+        <p>{product.itemIntro}</p>
         <div className={classes.price}>
           <div className={classes.total}>
-            <h4>$125</h4>
-            <h5>50%</h5>
+            <h4>${product.itemPrice.finalPrice}</h4>
+            <h5>{product.itemPrice.discount}%</h5>
           </div>
-          <h6>$250.00</h6>
+          <h6>${product.itemPrice.retail}</h6>
         </div>
 
         <div className={classes["cart-actions"]}>

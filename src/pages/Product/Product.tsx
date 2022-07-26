@@ -3,14 +3,36 @@ import ProductIntro from "../../components/ProductIntro";
 import ProductFeatures from "../../components/ProductFeatures";
 import Navigation from "../../components/ui/Navigation";
 import Footer from "../../components/ui/Footer";
+import { useParams } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../../components/ui/Loading";
+
+import classes from "./Product.module.scss";
 
 const Product = () => {
+  const id = useParams().id;
+  const { loading, error, data } = useFetch(
+    "https://e-commerce-c8199-default-rtdb.europe-west1.firebasedatabase.app/products/-N7uYvOjW-UAMzhs8Mn0.json"
+  );
+
+  const item = data.filter((product) => {
+    if (product.id === id) return true;
+  });
+
   return (
     <>
       <Navigation></Navigation>
-      <ProductObj></ProductObj>
-      <ProductFeatures></ProductFeatures>
-      <ProductIntro></ProductIntro>
+      {loading && <Loading></Loading>}
+      {loading && <div className={classes["loading-container"]}></div>}
+      {!loading && !error && data.length > 0 && (
+        <ProductObj item={item}></ProductObj>
+      )}
+      {!loading && !error && data.length > 0 && (
+        <ProductFeatures item={item}></ProductFeatures>
+      )}
+      {!loading && !error && data.length > 0 && (
+        <ProductIntro item={item}></ProductIntro>
+      )}
       <Footer></Footer>
     </>
   );
