@@ -1,20 +1,44 @@
+/* eslint-disable no-unused-vars */
+import { FC, useState } from "react";
 import classes from "./Filters.module.scss";
+import React from "react";
 
-const Filters = () => {
+interface Props {
+  handleFilterCategory: (category: string) => void;
+}
+const Filters: FC<Props> = ({ handleFilterCategory }) => {
+  const [viewSelection, setViewSelection] = useState(false);
+
+  const handleClick = () => {
+    setViewSelection((prevState) => !prevState);
+  };
+
+  const handleFilterClick = (e: React.MouseEvent<HTMLElement>) => {
+    if (e.currentTarget.innerHTML === "--REMOVE FILTER--") {
+      handleFilterCategory("");
+      handleClick();
+      return;
+    }
+    handleFilterCategory(e.currentTarget.innerHTML);
+    handleClick();
+  };
+
   return (
     <div className={classes.container}>
-      <button className={classes.trigger}>
-        Filter by{" "}
+      <button className={classes.trigger} onClick={handleClick}>
+        Select category{" "}
         <span>
           <img src="assets/icons/arrow-down.svg" alt="" />
         </span>
       </button>
-      <div className={classes.filters}>
-        <button>Filter1</button>
-        <button>Filter1</button>
-        <button>Filter1</button>
-        <button>Filter1</button>
-      </div>
+      {viewSelection && (
+        <div className={classes.filters}>
+          <button onClick={handleFilterClick}>--REMOVE FILTER--</button>
+          <button onClick={handleFilterClick}>SOLID COLOR</button>
+          <button onClick={handleFilterClick}>METALLIC COLOR</button>
+          <button onClick={handleFilterClick}>TRANSPARENT COLOR</button>
+        </div>
+      )}
     </div>
   );
 };

@@ -2,42 +2,47 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.container h4 {
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 48px;
-  letter-spacing: 2px;
-  text-align: left;
-  color: white;
-}
-
-.container a {
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 5px;
-  text-align: left;
-  text-transform: uppercase;
-  border-bottom: 1px solid white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 0.3s;
-}
 
-.container a:hover {
-  border-bottom: 1px solid orange;
-}
+  &:hover {
+    transform: scale(0.98);
+  }
 
-.container a span {
-  color: orange;
+  h4 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid orange;
+    }
+
+    span {
+      color: orange;
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {

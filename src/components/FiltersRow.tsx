@@ -1,13 +1,20 @@
+/* eslint-disable no-unused-vars */
 import SearchBar from "./ui/SearchBar";
 import Filters from "./ui/Filters";
 
 import classes from "./FilterRow.module.scss";
+import { FC } from "react";
 
-const FilterRow = () => {
+interface Props {
+  handleFilterCategory: (category: string) => void;
+  handleSearchValue: (searchedValue: string) => void;
+}
+
+const FilterRow: FC<Props> = ({ handleFilterCategory, handleSearchValue }) => {
   return (
     <div className={classes.container}>
-      <SearchBar></SearchBar>
-      <Filters></Filters>
+      <SearchBar handleSearchValue={handleSearchValue}></SearchBar>
+      <Filters handleFilterCategory={handleFilterCategory}></Filters>
     </div>
   );
 };

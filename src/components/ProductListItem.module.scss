@@ -1,7 +1,9 @@
 .container {
+  height: 100%;
+  cursor: pointer;
+
   .image-container {
     height: 90%;
-    background-image: url(../../public/assets/home/desktop/image-hero-federal.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,6 +25,7 @@
     text-transform: uppercase;
     h5 {
       font-weight: 300;
+      font-size: 12px;
     }
   }
 }

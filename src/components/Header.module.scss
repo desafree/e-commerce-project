@@ -1,11 +1,15 @@
 .header {
-  background-color: rgba(128, 128, 128, 0.158);
+  background-image: url(../../public/assets/home/header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header .text {
   padding-top: 390px;
   padding-left: 165px;
   padding-bottom: 180px;
+  color: white;
 }
 
 .text h5 {
