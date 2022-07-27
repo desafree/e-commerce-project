@@ -2,7 +2,7 @@
   padding: 250px 165px 200px;
   background: #f2f2f2;
 
-  a {
+  button {
     margin-bottom: 38px;
     color: orange;
     font-size: 15px;
@@ -10,6 +10,10 @@
     line-height: 25px;
     letter-spacing: 0px;
     text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid orange;
+    cursor: pointer;
   }
 
   .forms {

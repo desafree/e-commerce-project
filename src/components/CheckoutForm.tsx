@@ -1,12 +1,18 @@
 import classes from "./CheckoutForm.module.scss";
-import { Link } from "react-router-dom";
 import BuyForm from "./BuyForm";
 import SummaryForm from "./SummaryForm";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className={classes.container}>
-      <Link to="/">Go back</Link>
+      <button onClick={handleClick}>Go back</button>
       <div className={classes.forms}>
         <BuyForm></BuyForm>
         <SummaryForm></SummaryForm>
