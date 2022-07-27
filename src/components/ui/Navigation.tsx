@@ -8,7 +8,6 @@ const Navigation = () => {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
-    console.log("fired");
     setActive((prevState) => !prevState);
   };
 
@@ -29,7 +28,7 @@ const Navigation = () => {
         </li>
       </ul>
       <button className={classes.cart} onClick={handleClick}>
-        <img src="assets/icons/cart-black.svg" alt="" />
+        <img src="/assets/icons/cart-black.svg" alt="" />
       </button>
       {active &&
         createPortal(

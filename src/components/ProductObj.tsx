@@ -1,31 +1,44 @@
 import classes from "./ProductObj.module.scss";
 import product from "../typescript/interface/product";
-import { FC } from "react";
+import { FC, useState } from "react";
+
+import ProductGallery from "./ProductGallery";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../redux/cartSlice";
 
 interface Props {
   item: product[];
 }
 
 const ProductObj: FC<Props> = ({ item }) => {
+  const dispatch = useDispatch();
   const [product] = item;
-  console.log(product);
+  const [qty, setQty] = useState(1);
+
+  const handleClickPlus = () => {
+    setQty((prevState) => prevState + 1);
+  };
+
+  const handleClickMinus = () => {
+    if (qty === 1) return;
+    setQty((prevState) => prevState - 1);
+  };
+
+  const handleClickCart = () => {
+    dispatch(
+      cartActions.addProduct({
+        name: product.itemName,
+        price: product.itemPrice,
+        qty: qty,
+        img: product.img[0],
+      })
+    );
+    setQty(1);
+  };
 
   return (
     <main className={classes.container}>
-      <div className={classes.images}>
-        <div
-          className={classes["image-container"]}
-          style={{
-            backgroundImage: `url(/${product.img[0]})`,
-          }}
-        ></div>
-        <div className={classes.gallery}>
-          {product.img.map((imgUrl, index) => {
-            if (index === 0) return;
-            return <img src={`/${imgUrl}`} alt="" key={index} />;
-          })}
-        </div>
-      </div>
+      <ProductGallery product={product}></ProductGallery>
       <div className={classes.text}>
         <h5>{product.categoryName}</h5>
         <h2>{product.itemName}</h2>
@@ -40,11 +53,11 @@ const ProductObj: FC<Props> = ({ item }) => {
 
         <div className={classes["cart-actions"]}>
           <div className={classes.quantity}>
-            <button>-</button>
-            <h4>0</h4>
-            <button>+</button>
+            <button onClick={handleClickMinus}>-</button>
+            <h4>{qty}</h4>
+            <button onClick={handleClickPlus}>+</button>
           </div>
-          <button className={classes.addCart}>
+          <button className={classes.addCart} onClick={handleClickCart}>
             {" "}
             <img src="./assets/icons/cart.svg" alt="" /> Add to cart
           </button>

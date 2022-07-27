@@ -8,9 +8,31 @@ import Products from "./pages/Products/Products";
 import Login from "./pages/Login/Login";
 import Checkout from "./pages/Chekout/Checkout";
 
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "./redux/cartSlice";
+
 function App() {
+  const cart = useSelector((state) => state);
+  console.log(cart);
+  const dispatch = useDispatch();
+
+  const handleClickAdd = () => {
+    dispatch(cartActions.addProduct({ name: "prova", price: 10, img: "bla" }));
+  };
+
+  const handleClickRemove = () => {
+    dispatch(cartActions.removeProduct({ name: "prova" }));
+  };
+
+  const handleClickReset = () => {
+    dispatch(cartActions.clearCart());
+  };
+
   return (
     <>
+      <button onClick={handleClickAdd}>Add</button>
+      <button onClick={handleClickRemove}>Remove</button>
+      <button onClick={handleClickReset}>Reset</button>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/products" element={<Products></Products>}></Route>

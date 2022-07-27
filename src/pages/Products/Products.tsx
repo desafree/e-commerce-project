@@ -23,7 +23,6 @@ const Products = () => {
   };
 
   const displayedProducts = data.filter((item) => {
-    console.log(item.categoryName);
     if (
       filterCategory === "" &&
       item.itemName.includes(searchValue.toUpperCase())
