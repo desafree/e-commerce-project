@@ -6,10 +6,13 @@ import ProductList from "../../components/ProductList";
 import Navigation from "../../components/ui/Navigation";
 import Footer from "../../components/ui/Footer";
 import React from "react";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 import { useState } from "react";
 
 const Products = () => {
+  useScrollToTop();
+
   const { loading, error, data } = useFetch(
     "https://e-commerce-c8199-default-rtdb.europe-west1.firebasedatabase.app/products/-N7uYvOjW-UAMzhs8Mn0.json"
   );

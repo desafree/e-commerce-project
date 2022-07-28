@@ -5,8 +5,11 @@ import { useRef, useState } from "react";
 import { authActions } from "../../redux/authSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 const Login = () => {
+  useScrollToTop();
+
   const navigation = useNavigate();
   const dispatch = useDispatch();
   const [login, setLogin] = useState(true);

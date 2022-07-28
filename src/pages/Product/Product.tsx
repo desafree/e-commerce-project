@@ -8,8 +8,11 @@ import useFetch from "../../hooks/useFetch";
 import Loading from "../../components/ui/Loading";
 
 import classes from "./Product.module.scss";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 const Product = () => {
+  useScrollToTop();
+
   const id = useParams().id;
   const { loading, error, data } = useFetch(
     "https://e-commerce-c8199-default-rtdb.europe-west1.firebasedatabase.app/products/-N7uYvOjW-UAMzhs8Mn0.json"
