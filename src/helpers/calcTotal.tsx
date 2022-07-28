@@ -6,7 +6,6 @@ const calcTotal = (arr: cartItem[]) => {
       const newPrice =
         currValue.price.finalPrice * currValue.qty + prevValue.price;
       const shipping = 5;
-      console.log(shipping);
       const newTax = newPrice * 0.2;
       const finalPrice = newPrice + shipping + newTax;
 

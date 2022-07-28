@@ -97,6 +97,19 @@
       display: block;
       border: none;
       text-decoration: none;
+
+      &.disabled {
+        background-color: rgba(128, 128, 128, 0.397);
+        cursor: not-allowed;
+      }
+    }
+    .login {
+      font-size: 15px;
+      margin-top: 10px;
+      text-align: center;
+      a {
+        color: orange;
+      }
     }
   }
 }

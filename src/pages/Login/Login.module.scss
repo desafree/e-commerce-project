@@ -16,6 +16,14 @@
     max-width: 400px;
     width: 100%;
 
+    .error {
+      color: red;
+    }
+
+    .enter-button {
+      cursor: pointer;
+    }
+
     h3 {
       //styleName: Heading (L);
       text-transform: capitalize;
@@ -64,8 +72,23 @@
       line-height: 19px;
       letter-spacing: 0px;
 
-      a {
+      .change-login {
+        margin-top: 0px;
+        width: initial;
+        padding: 0px;
+        background: transparent;
+        border-radius: 0;
+        //styleName: Body (M);
         color: orange;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-bottom: 24px;
+        border: none;
+        cursor: pointer;
+        text-decoration: underline;
       }
     }
   }

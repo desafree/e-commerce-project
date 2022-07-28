@@ -6,6 +6,7 @@ import store from "../typescript/interface/store";
 import cartStore from "../typescript/interface/cartStore";
 import { cartActions } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
+import auth from "../typescript/interface/auth";
 
 interface Props {
   onClickFunction: () => void;
@@ -13,6 +14,7 @@ interface Props {
 
 const Cart: FC<Props> = ({ onClickFunction }) => {
   const cart: cartStore = useSelector((state: store) => state.cart);
+  const auth: auth = useSelector((state: store) => state.auth);
   const items = cart.cart;
 
   const dispatch = useDispatch();
@@ -40,10 +42,23 @@ const Cart: FC<Props> = ({ onClickFunction }) => {
           <h4>Total</h4>
           <h4 className={classes.price}>${cart.total.finalPrice}</h4>
         </div>
-        {cart.cart.length > 0 && (
+        {cart.cart.length > 0 && auth.isLoggedIn && (
           <Link className={classes.checkout} to="/checkout">
             Checkout
           </Link>
+        )}
+        {cart.cart.length > 0 && !auth.isLoggedIn && (
+          <button
+            className={`${classes.checkout} ${classes.disabled}`}
+            type="button"
+          >
+            Checkout
+          </button>
+        )}
+        {cart.cart.length > 0 && !auth.isLoggedIn && (
+          <p className={classes.login}>
+            <Link to="/login">Login</Link> to checkout
+          </p>
         )}
       </div>
     </div>
