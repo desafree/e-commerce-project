@@ -60,11 +60,12 @@ const Login = () => {
             <h3>{login ? "Login" : "Logout"}</h3>
             {error !== "" && <p className={classes.error}>{error}</p>}
             <input
-              type="text"
+              type="email"
               name=""
               id=""
               placeholder="Email address"
               ref={email}
+              required
             />
             <input
               type="password"
@@ -72,6 +73,8 @@ const Login = () => {
               id=""
               placeholder="Password"
               ref={password}
+              required
+              minLength={6}
             />
             {!login && (
               <input
@@ -80,6 +83,8 @@ const Login = () => {
                 id=""
                 placeholder="Repeat Password"
                 ref={verifyPassword}
+                required
+                minLength={6}
               />
             )}
             <button type="submit" className={classes["enter-button"]}>

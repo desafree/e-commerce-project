@@ -31,7 +31,7 @@ const SummaryForm = () => {
         <h5>FINAL PRICE</h5>
         <h5 className={classes.price}>${cart.total.finalPrice}</h5>
       </div>
-      <button>checkout</button>
+      <button form="checkout-form">checkout</button>
     </div>
   );
 };
