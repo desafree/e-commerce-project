@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import store from "../../typescript/interface/store";
 import auth from "../../typescript/interface/auth";
 import { authActions } from "../../redux/authSlice";
+import { cartActions } from "../../redux/cartSlice";
 
 const Navigation = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Navigation = () => {
 
   const handleClickLogout = () => {
     dispatch(authActions.logout());
+    dispatch(cartActions.clearCart());
   };
 
   return (
