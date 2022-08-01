@@ -1,16 +1,22 @@
 /* eslint-disable react/prop-types */
 import classes from "./Category.module.scss";
-
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FC } from "react";
 
 interface Props {
   title: string;
-  link: string;
   url: string;
+  category: string;
 }
 
-const Category: FC<Props> = ({ title, link, url }) => {
+const Category: FC<Props> = ({ title, url, category }) => {
+  const navigate = useNavigate();
+  const onClickHandler = () =>
+    navigate({
+      pathname: "/products",
+      search: "?category=" + category,
+    });
+
   return (
     <div
       className={classes.container}
@@ -19,9 +25,9 @@ const Category: FC<Props> = ({ title, link, url }) => {
       }}
     >
       <h4>{title}</h4>
-      <Link to={link}>
+      <button onClick={onClickHandler}>
         discover more <span>&gt;</span>
-      </Link>
+      </button>
     </div>
   );
 };

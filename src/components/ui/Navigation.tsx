@@ -47,7 +47,7 @@ const Navigation = () => {
         )}
       </ul>
       <button className={classes.cart} onClick={handleClick}>
-        <img src="/assets/icons/cart-black.svg" alt="" />
+        <img src="/assets/icons/cart.svg" alt="" />
       </button>
       {active &&
         createPortal(

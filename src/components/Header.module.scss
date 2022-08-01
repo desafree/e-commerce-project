@@ -12,6 +12,26 @@
   color: white;
 }
 
+.text a {
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  background-color: orange;
+  border: 1px solid orange;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid orange;
+    color: orange;
+  }
+}
+
 .text h5 {
   font-size: 14px;
   font-weight: 400;

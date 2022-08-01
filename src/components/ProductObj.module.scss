@@ -1,5 +1,5 @@
 .container {
-  margin: 300px 165px 200px;
+  margin: 200px 165px 200px;
   display: flex;
   justify-content: center;
   gap: 125px;
@@ -177,7 +177,7 @@
 @media only screen and (max-width: 1200px) {
   .container {
     flex-direction: column;
-    margin: 300px 100px 200px;
+    margin: 200px 100px 200px;
 
     .cart-actions {
       flex-direction: row;
@@ -196,7 +196,7 @@
 
 @media only screen and (max-width: 800px) {
   .container {
-    margin: 250px 50px 150px;
+    margin: 150px 50px 150px;
 
     .cart-actions {
       flex-direction: column;

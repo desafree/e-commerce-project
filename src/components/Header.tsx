@@ -1,6 +1,6 @@
 import classes from "./Header.module.scss";
-
-import Button from "./ui/Button";
+// import Button from "./ui/Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,7 +14,7 @@ const Header = () => {
             suscipit. Animi non sunt quos vel soluta corrupti officia quibusdam
             consectetur.
           </p>
-          <Button type="color">discover more</Button>
+          <Link to="/products">discover more</Link>
         </div>
       </div>
     </>

@@ -7,17 +7,17 @@ const SectionCategory = () => {
     <div className={classes.container}>
       <Category
         title="Web design"
-        link="/"
+        category="solid"
         url="assets/home/category-color.jpg"
       ></Category>
       <Category
         title="Web design"
-        link="/"
+        category="metallic"
         url="assets/home/category-metal.jpg"
       ></Category>
       <Category
         title="Web design"
-        link="/"
+        category="transparent"
         url="assets/home/category-transparent.jpg"
       ></Category>
     </div>
