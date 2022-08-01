@@ -1,24 +1,39 @@
 import classes from "./ProductObj.module.scss";
 import product from "../typescript/interface/product";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 interface Props {
   product: product;
 }
 
 const ProductGallery: FC<Props> = ({ product }) => {
+  const [activeImg, setActiveImg] = useState(product.img[0]);
+
+  const onClickHandler = (index: number) => {
+    setActiveImg(product.img[index]);
+  };
+
   return (
     <div className={classes.images}>
       <div
         className={classes["image-container"]}
         style={{
-          backgroundImage: `url(/${product.img[0]})`,
+          backgroundImage: `url(/${activeImg})`,
         }}
       ></div>
       <div className={classes.gallery}>
         {product.img.map((imgUrl, index) => {
-          if (index === 0) return;
-          return <img src={`/${imgUrl}`} alt="" key={index} />;
+          return (
+            <img
+              src={`/${imgUrl}`}
+              alt=""
+              key={index}
+              className={imgUrl === activeImg ? classes.active : ""}
+              onClick={() => {
+                onClickHandler(index);
+              }}
+            />
+          );
         })}
       </div>
     </div>

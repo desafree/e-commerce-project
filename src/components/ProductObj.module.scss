@@ -22,11 +22,18 @@
     .gallery {
       display: flex;
       gap: 30px;
+      flex-wrap: wrap;
+      max-width: 445px;
 
       img {
         border-radius: 10px;
         height: 88px;
         width: 88px;
+
+        &.active {
+          outline: 3px solid orange;
+          opacity: 0.5;
+        }
       }
     }
   }
