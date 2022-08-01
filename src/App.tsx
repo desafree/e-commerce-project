@@ -14,6 +14,7 @@ import auth from "./typescript/interface/auth";
 function App() {
   const cart: cartStore = useSelector((state: store) => state.cart);
   const auth: auth = useSelector((state: store) => state.auth);
+
   return (
     <>
       <Routes>

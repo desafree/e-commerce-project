@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 import classes from "./Login.module.scss";
 import Navigation from "../../components/ui/Navigation";
@@ -26,12 +27,14 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!login && password.current?.value !== verifyPassword.current?.value) {
-      setError("Use the same password!");
+      setError("Password don't match");
       return;
     }
     const url = login
-      ? "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAJzaFt4UlCi8bkJyivDIZgAPkbwmDROsQ"
-      : "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAJzaFt4UlCi8bkJyivDIZgAPkbwmDROsQ";
+      ? "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" +
+        process.env.REACT_APP_API_KEY
+      : "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" +
+        process.env.REACT_APP_API_KEY;
 
     try {
       const response = await fetch(url, {
@@ -44,10 +47,13 @@ const Login = () => {
       });
 
       const returnedToken = await response.json();
+      if ("error" in returnedToken) {
+        throw new Error(returnedToken.error.message);
+      }
       dispatch(authActions.login({ token: returnedToken.idToken }));
       navigation("/");
-    } catch (error) {
-      setError("something went wrong");
+    } catch (error: any) {
+      setError(error.message);
     }
   };
 
