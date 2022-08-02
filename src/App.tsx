@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import cartStore from "./typescript/interface/cartStore";
 import store from "./typescript/interface/store";
 import auth from "./typescript/interface/auth";
+import Navigation from "./components/ui/Navigation";
 
 function App() {
   const cart: cartStore = useSelector((state: store) => state.cart);
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <Navigation></Navigation>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/products" element={<Products></Products>}></Route>

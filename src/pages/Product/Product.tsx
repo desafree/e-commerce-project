@@ -1,7 +1,6 @@
 import ProductObj from "../../components/ProductObj";
 import ProductIntro from "../../components/ProductIntro";
 import ProductFeatures from "../../components/ProductFeatures";
-import Navigation from "../../components/ui/Navigation";
 import Footer from "../../components/ui/Footer";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
@@ -24,7 +23,6 @@ const Product = () => {
 
   return (
     <>
-      <Navigation></Navigation>
       {loading && <Loading></Loading>}
       {loading && <div className={classes["loading-container"]}></div>}
       {!loading && !error && data.length > 0 && (

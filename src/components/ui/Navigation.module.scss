@@ -11,6 +11,18 @@
   z-index: 3;
 }
 
+.updated {
+  position: fixed;
+  top: 105px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .navigation .logo {
   color: #fff;
   font-size: 48px;
@@ -52,6 +64,23 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+
+  span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background-color: orange;
+    top: -3px;
+    right: 0;
+    color: #000;
+    font-weight: 700;
+  }
 
   img {
     width: 30px;

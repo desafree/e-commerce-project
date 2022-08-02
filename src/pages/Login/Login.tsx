@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 import React from "react";
 import classes from "./Login.module.scss";
-import Navigation from "../../components/ui/Navigation";
 import { useRef, useState } from "react";
 import { authActions } from "../../redux/authSlice";
 import { useDispatch } from "react-redux";
@@ -59,7 +58,6 @@ const Login = () => {
 
   return (
     <>
-      <Navigation></Navigation>
       <div className={classes.container}>
         <div className={classes.login}>
           <form action="#" onSubmit={handleSubmit}>

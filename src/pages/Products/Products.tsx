@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
 import classes from "./Products.module.scss";
 import useFetch from "../../hooks/useFetch";
 import FilterRow from "../../components/FiltersRow";
 import ProductList from "../../components/ProductList";
-import Navigation from "../../components/ui/Navigation";
 import Footer from "../../components/ui/Footer";
 import React from "react";
 import useScrollToTop from "../../hooks/useScrollToTop";
@@ -55,7 +53,6 @@ const Products = () => {
 
   return (
     <>
-      <Navigation></Navigation>
       <div className={classes.container}>
         <FilterRow
           handleFilterCategory={handleFilterCategory}
