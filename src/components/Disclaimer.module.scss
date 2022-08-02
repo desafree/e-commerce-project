@@ -32,8 +32,27 @@
     }
   }
 
-  button {
+  a {
     flex-shrink: 0;
+    padding: 15px 30px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: orange;
+    border: 1px solid orange;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid orange;
+      color: orange;
+    }
   }
 }
 

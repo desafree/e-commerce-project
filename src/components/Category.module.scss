@@ -8,9 +8,17 @@
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 0.3s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(0.98);
+    filter: contrast(150%);
+    h4 {
+      color: orange;
+    }
+    button {
+      border-bottom: 1px solid orange;
+    }
   }
 
   h4 {
@@ -21,6 +29,7 @@
     letter-spacing: 2px;
     text-align: left;
     color: white;
+    transition: all 0.3s;
   }
 
   button {
@@ -37,10 +46,6 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
-
-    &:hover {
-      border-bottom: 1px solid orange;
-    }
 
     span {
       color: orange;

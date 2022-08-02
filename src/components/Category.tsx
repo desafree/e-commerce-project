@@ -23,9 +23,10 @@ const Category: FC<Props> = ({ title, url, category }) => {
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url("${url}")`,
       }}
+      onClick={onClickHandler}
     >
       <h4>{title}</h4>
-      <button onClick={onClickHandler}>
+      <button>
         discover more <span>&gt;</span>
       </button>
     </div>

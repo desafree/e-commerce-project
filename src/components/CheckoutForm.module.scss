@@ -43,6 +43,10 @@
 
 @media only screen and (max-width: 800px) {
   .container {
-    padding: 150px 50px;
+    padding: 120px 20px 150px;
+
+    button {
+      margin-bottom: 0;
+    }
   }
 }

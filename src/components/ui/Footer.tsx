@@ -13,13 +13,25 @@ const Footer = () => {
             <Link to="/">LOGO</Link>
           </li>
           <li>
-            <Link to="/">link1</Link>
+            <a
+              href="https://github.com/desafree"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
           </li>
           <li>
-            <Link to="/">link1</Link>
+            <a
+              href="https://www.linkedin.com/in/nicola-de-sanctis-8b094a1b3/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Linkedin
+            </a>
           </li>
           <li>
-            <Link to="/">link1</Link>
+            <a href="mailto:nicoladesanctis99@gmail.com">Email</a>
           </li>
         </ul>
       </footer>
