@@ -1,14 +1,12 @@
 import classes from "./BuyForm.module.scss";
 import React from "react";
 import Input from "./ui/Input";
-// import { Link } from "react-router-dom";
-// import { createPortal } from "react-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
+import checkValidityObj from "../helpers/checkValidation";
 
 const BuyForm = () => {
-  // const [modal, setModal] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -16,21 +14,6 @@ const BuyForm = () => {
     e.preventDefault();
     dispatch(cartActions.clearCart());
     navigate("/");
-  };
-
-  const checkValidityName = (value: string) => {
-    if (value.length >= 6) return true;
-    return false;
-  };
-
-  const checkValidityEmail = (value: string) => {
-    if (value.length >= 6 && value.includes("@")) return true;
-    return false;
-  };
-
-  const checkValidityNumber = (value: string) => {
-    if (value.length === 10) return true;
-    return false;
   };
 
   return (
@@ -46,7 +29,7 @@ const BuyForm = () => {
           <div className={classes["inputs-container"]}>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={checkValidityName}
+                validityFunction={checkValidityObj.checkValidityName}
                 name="name"
                 errorMessage="min 6 chars length"
                 type="text"
@@ -56,7 +39,7 @@ const BuyForm = () => {
             </div>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={checkValidityEmail}
+                validityFunction={checkValidityObj.checkValidityEmail}
                 name="Email Address"
                 errorMessage="Type a correct email address"
                 type="email"
@@ -66,7 +49,7 @@ const BuyForm = () => {
             </div>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={checkValidityNumber}
+                validityFunction={checkValidityObj.checkValidityNumber}
                 name="Phone number"
                 errorMessage="Type a correct phone number of 10 chars"
                 type="tel"
@@ -82,7 +65,7 @@ const BuyForm = () => {
           <div className={classes["inputs-container"]}>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={checkValidityName}
+                validityFunction={checkValidityObj.checkValidityName}
                 name="Address"
                 errorMessage="Type a correct address"
                 type="text"
@@ -92,7 +75,7 @@ const BuyForm = () => {
             </div>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={checkValidityName}
+                validityFunction={checkValidityObj.checkValidityZip}
                 name="ZIP Code"
                 errorMessage="Type a correct ZIP Code"
                 type="text"
@@ -102,10 +85,7 @@ const BuyForm = () => {
             </div>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={(value) => {
-                  if (value.length > 3) return true;
-                  return false;
-                }}
+                validityFunction={checkValidityObj.checkValidityCity}
                 name="City"
                 errorMessage="Type a correct City value"
                 type="text"
@@ -115,10 +95,7 @@ const BuyForm = () => {
             </div>
             <div className={classes["input-container"]}>
               <Input
-                validityFunction={(value) => {
-                  if (value.length > 3) return true;
-                  return false;
-                }}
+                validityFunction={checkValidityObj.checkValidityCity}
                 name="Country"
                 errorMessage="Type a correct Country value"
                 type="text"
