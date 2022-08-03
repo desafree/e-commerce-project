@@ -6,8 +6,9 @@ import Footer from "../../components/ui/Footer";
 import React from "react";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import { useLocation } from "react-router-dom";
-
 import { useState } from "react";
+import ActiveFilters from "../../components/ActiveFilters";
+import Pagination from "../../components/Pagination";
 
 const Products = () => {
   useScrollToTop();
@@ -31,11 +32,17 @@ const Products = () => {
   );
   const [searchValue, SetSearchValue] = useState("");
   const [filterCategory, setFilterCategory] = useState(category);
+
   const handleFilterCategory = (category: string) => {
     setFilterCategory(category);
+    setCurrentPage(1);
   };
   const handleSearchValue = (searchValue: string) => {
     SetSearchValue(searchValue);
+    setCurrentPage(1);
+  };
+  const handleActiveFilter = () => {
+    setFilterCategory("");
   };
 
   const displayedProducts = data.filter((item) => {
@@ -51,6 +58,21 @@ const Products = () => {
       return true;
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = displayedProducts.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div className={classes.container}>
@@ -58,11 +80,21 @@ const Products = () => {
           handleFilterCategory={handleFilterCategory}
           handleSearchValue={handleSearchValue}
         ></FilterRow>
+        <ActiveFilters
+          activeFilter={filterCategory}
+          handleActiveFilter={handleActiveFilter}
+        ></ActiveFilters>
         <ProductList
           loading={loading}
           error={error}
-          data={displayedProducts}
+          data={currentPosts}
         ></ProductList>
+        <Pagination
+          currentPage={currentPage}
+          postsPerPage={postsPerPage}
+          totalPosts={displayedProducts.length}
+          paginate={paginate}
+        />
       </div>
       <Footer></Footer>
     </>

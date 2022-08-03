@@ -1,0 +1,32 @@
+.container {
+  margin-top: 30px;
+  display: flex;
+
+  span {
+    background: #89a0a021;
+    border-radius: 4px;
+    padding: 8px 8px 5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: -0.1230769231915474px;
+    text-align: left;
+    color: #91a8a8;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s;
+  }
+
+  button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b3939;
+    border-radius: 0px 4px 4px 0px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}

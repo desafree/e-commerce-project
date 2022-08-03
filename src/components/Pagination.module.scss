@@ -1,0 +1,45 @@
+.container {
+  ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    li button {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0em;
+      text-align: left;
+      border: 1px solid #b7bcce;
+      border-radius: 4px;
+      background-color: transparent;
+
+      &:hover {
+        border: 1px solid orange;
+        color: orange;
+      }
+
+      &.active {
+        background-color: orange;
+        color: white;
+        border: 1px solid orange;
+      }
+    }
+  }
+}
+
+// <nav className={classes.container}>
+//   <ul className="pagination">
+//     {pageNumbers.map((number) => (
+//       <li key={number} className="page-item">
+//         <button onClick={() => paginate(number)} className="page-link">
+//           {number}
+//         </button>
+//       </li>
+//     ))}
+//   </ul>
+// </nav>

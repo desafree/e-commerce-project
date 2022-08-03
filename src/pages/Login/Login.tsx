@@ -61,7 +61,7 @@ const Login = () => {
       <div className={classes.container}>
         <div className={classes.login}>
           <form action="#" onSubmit={handleSubmit}>
-            <h3>{login ? "Login" : "Logout"}</h3>
+            <h3>{login ? "Login" : "Sign Up"}</h3>
             {error !== "" && <p className={classes.error}>{error}</p>}
             <input
               type="email"

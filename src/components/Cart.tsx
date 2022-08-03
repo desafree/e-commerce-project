@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./Cart.module.scss";
 import CartItem from "./CartItem";
@@ -7,6 +7,7 @@ import cartStore from "../typescript/interface/cartStore";
 import { cartActions } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import auth from "../typescript/interface/auth";
+import React from "react";
 
 interface Props {
   onClickFunction: () => void;
@@ -17,6 +18,8 @@ const Cart: FC<Props> = ({ onClickFunction }) => {
   const auth: auth = useSelector((state: store) => state.auth);
   const items = cart.cart;
 
+  const container = useRef<HTMLDivElement>(null);
+
   const dispatch = useDispatch();
   const handleClickRemove = () => {
     dispatch(cartActions.clearCart());
@@ -24,8 +27,17 @@ const Cart: FC<Props> = ({ onClickFunction }) => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.cart}>
+    <div
+      className={classes.container}
+      onClick={onClickFunction}
+      ref={container}
+    >
+      <div
+        className={classes.cart}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <button className={classes.close} onClick={onClickFunction}>
           X
         </button>
@@ -43,7 +55,11 @@ const Cart: FC<Props> = ({ onClickFunction }) => {
           <h4 className={classes.price}>${cart.total.finalPrice}</h4>
         </div>
         {cart.cart.length > 0 && auth.isLoggedIn && (
-          <Link className={classes.checkout} to="/checkout">
+          <Link
+            className={classes.checkout}
+            to="/checkout"
+            onClick={onClickFunction}
+          >
             Checkout
           </Link>
         )}
