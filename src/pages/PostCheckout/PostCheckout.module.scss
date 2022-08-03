@@ -54,14 +54,11 @@
   }
 }
 
-// <div className={classes.container}>
-//       <div className={classes.thanks}>
-//         <h2>Thank you!</h2>
-//         <p>
-//           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore
-//           quam expedita perferendis! Provident enim dicta repellat velit
-//           laboriosam. Totam quaerat aut ut illo unde.
-//         </p>
-//         <Link to="/">Go back home</Link>
-//       </div>
-//     </div>
+@media only screen and (max-width: 800px) {
+  .container {
+    .thanks {
+      margin: 0 30px;
+      width: 300px;
+    }
+  }
+}

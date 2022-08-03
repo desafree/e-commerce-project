@@ -9,9 +9,14 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import ActiveFilters from "../../components/ActiveFilters";
 import Pagination from "../../components/Pagination";
+// import products from "../../typescript/interface/products";
+// import { useSelector } from "react-redux";
+// import store from "../../typescript/interface/store";
 
 const Products = () => {
   useScrollToTop();
+  // const products: products = useSelector((state: store) => state.products);
+  // console.log(products);
 
   const search = useLocation().search;
   const params = new URLSearchParams(search);

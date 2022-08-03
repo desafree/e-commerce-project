@@ -73,7 +73,10 @@ const Cart: FC<Props> = ({ onClickFunction }) => {
         )}
         {cart.cart.length > 0 && !auth.isLoggedIn && (
           <p className={classes.login}>
-            <Link to="/login">Login</Link> to checkout
+            <Link to="/login" onClick={onClickFunction}>
+              Login
+            </Link>{" "}
+            to checkout
           </p>
         )}
       </div>
