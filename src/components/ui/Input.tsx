@@ -36,7 +36,7 @@ const Input: FC<Props> = ({
 
   useEffect(() => {
     if (!valid && !blur) {
-      input.current?.setCustomValidity("");
+      input.current?.setCustomValidity("insert valid value");
       setNameClass("wait");
     } else if (!valid && blur) {
       input.current?.setCustomValidity(errorMessage);

@@ -11,6 +11,7 @@ import cartStore from "./typescript/interface/cartStore";
 import store from "./typescript/interface/store";
 import auth from "./typescript/interface/auth";
 import Navigation from "./components/ui/Navigation";
+import PostCheckout from "./pages/PostCheckout/PostCheckout";
 
 function App() {
   const cart: cartStore = useSelector((state: store) => state.cart);
@@ -24,6 +25,10 @@ function App() {
         <Route path="/products" element={<Products></Products>}></Route>
         <Route path="/products/:id" element={<Product></Product>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route
+          path="/thank-you"
+          element={<PostCheckout></PostCheckout>}
+        ></Route>
         {cart.cart.length > 0 && auth.isLoggedIn && (
           <Route path="/checkout" element={<Checkout></Checkout>}></Route>
         )}

@@ -1,23 +1,36 @@
 import classes from "./BuyForm.module.scss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Input from "./ui/Input";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
 import checkValidityObj from "../helpers/checkValidation";
+import { createPortal } from "react-dom";
+import Loading from "./ui/Loading";
 
 const BuyForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    dispatch(cartActions.clearCart());
-    navigate("/");
+
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/thank-you");
+      dispatch(cartActions.clearCart());
+    }, 1000);
   };
+
+  useEffect(() => {});
 
   return (
     <>
+      {loading &&
+        createPortal(<Loading></Loading>, document.getElementById("root")!)}
       <form
         className={classes.container}
         id="checkout-form"
