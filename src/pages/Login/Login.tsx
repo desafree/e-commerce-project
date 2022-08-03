@@ -65,16 +65,16 @@ const Login = () => {
             {error !== "" && <p className={classes.error}>{error}</p>}
             <input
               type="email"
-              name=""
-              id=""
+              name="email"
+              id="email"
               placeholder="Email address"
               ref={email}
               required
             />
             <input
               type="password"
-              name=""
-              id=""
+              name="password"
+              id="password"
               placeholder="Password"
               ref={password}
               required
@@ -83,8 +83,8 @@ const Login = () => {
             {!login && (
               <input
                 type="password"
-                name=""
-                id=""
+                name="passwordRedo"
+                id="passwordRedo"
                 placeholder="Repeat Password"
                 ref={verifyPassword}
                 required

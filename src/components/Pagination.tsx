@@ -16,7 +16,6 @@ const Pagination: FC<Props> = ({
   currentPage,
 }) => {
   const pageNumbers = [];
-  console.log(postsPerPage, totalPosts);
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);

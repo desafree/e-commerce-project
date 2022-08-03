@@ -1,7 +1,16 @@
 import classes from "./PostCheckout.module.scss";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../redux/cartSlice";
 
 const PostCheckout = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(cartActions.clearCart());
+  }, []);
+
   return (
     <div className={classes.container}>
       <div className={classes.thanks}>

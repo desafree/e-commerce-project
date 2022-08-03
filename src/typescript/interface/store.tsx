@@ -1,11 +1,11 @@
 import cartStore from "./cartStore";
 import auth from "./auth";
-import products from "./products";
+import product from "./product";
 
 interface store {
   cart: cartStore;
   auth: auth;
-  products: products;
+  products: product[];
 }
 
 export default store;

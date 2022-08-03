@@ -86,7 +86,7 @@ const Navigation = () => {
       </nav>
       {cartUpdated && <div className={classes.updated}>Cart updated</div>}
       <nav className={classes["mobile-navigation"]}>
-        <div className={classes.mobile}>
+        <nav className={classes.mobile}>
           <div
             className={`${classes["menu_icon"]} ${
               clicked ? classes["clicked"] : ""
@@ -97,7 +97,7 @@ const Navigation = () => {
             <span className={classes.two}></span>
             <span className={classes.three}></span>
           </div>
-        </div>
+        </nav>
         {clicked && (
           <div className={classes.open}>
             <ul>

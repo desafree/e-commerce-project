@@ -13,8 +13,16 @@ import auth from "./typescript/interface/auth";
 import Navigation from "./components/ui/Navigation";
 import PostCheckout from "./pages/PostCheckout/PostCheckout";
 import { Navigate } from "react-router-dom";
+// import { lazy,Suspense } from "react";
 // import { productsThunk } from "./redux/productsSlice";
 // import { useDispatch } from "react-redux";
+
+// const Home = lazy(() => import("./pages/home/Home"));
+// const Products = lazy(() => import("./pages/Products/Products"));
+// const Product = lazy(() => import("./pages/Product/Product"));
+// const Login = lazy(() => import("./pages/Login/Login"));
+// const PostCheckout = lazy(() => import("./pages/PostCheckout/PostCheckout"));
+// const Checkout = lazy(() => import("./pages/Chekout/Checkout"));
 
 function App() {
   // const dispatch = useDispatch();

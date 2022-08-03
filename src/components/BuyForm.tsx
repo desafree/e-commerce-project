@@ -1,15 +1,12 @@
 import classes from "./BuyForm.module.scss";
 import React, { useEffect, useState } from "react";
 import Input from "./ui/Input";
-import { useDispatch } from "react-redux";
-import { cartActions } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
 import checkValidityObj from "../helpers/checkValidation";
 import { createPortal } from "react-dom";
 import Loading from "./ui/Loading";
 
 const BuyForm = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -21,7 +18,6 @@ const BuyForm = () => {
     setTimeout(() => {
       setLoading(false);
       navigate("/thank-you");
-      dispatch(cartActions.clearCart());
     }, 1000);
   };
 
