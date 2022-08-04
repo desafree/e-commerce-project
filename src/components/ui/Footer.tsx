@@ -1,5 +1,4 @@
 import classes from "./Footer.module.scss";
-
 import Disclaimer from "../Disclaimer";
 import { Link } from "react-router-dom";
 

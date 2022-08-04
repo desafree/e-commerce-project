@@ -9,23 +9,23 @@ interface Props {
 const Filters: FC<Props> = ({ handleFilterCategory }) => {
   const [viewSelection, setViewSelection] = useState(false);
 
-  const handleClick = () => {
+  const handleVisibilityClick = () => {
     setViewSelection((prevState) => !prevState);
   };
 
   const handleFilterClick = (e: React.MouseEvent<HTMLElement>) => {
     if (e.currentTarget.innerHTML === "--REMOVE FILTER--") {
       handleFilterCategory("");
-      handleClick();
+      handleVisibilityClick();
       return;
     }
     handleFilterCategory(e.currentTarget.innerHTML);
-    handleClick();
+    handleVisibilityClick();
   };
 
   return (
     <div className={classes.container}>
-      <button className={classes.trigger} onClick={handleClick}>
+      <button className={classes.trigger} onClick={handleVisibilityClick}>
         Select category{" "}
         <span>
           <img src="assets/icons/arrow-down.svg" alt="" />

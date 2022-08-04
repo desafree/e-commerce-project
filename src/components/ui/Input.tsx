@@ -57,7 +57,7 @@ const Input: FC<Props> = ({
         onBlur={onBlurHandler}
         onChange={onChangeHandler}
         placeholder={placeholder}
-        // required={required}
+        required={required}
         id={name}
       />
     </>

@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import SearchBar from "./ui/SearchBar";
-import Filters from "./ui/Filters";
-
-import classes from "./FilterRow.module.scss";
+import Filters from "./Filters";
+import classes from "./FiltersRow.module.scss";
 import { FC } from "react";
 
 interface Props {

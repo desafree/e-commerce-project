@@ -1,36 +1,3 @@
-// .modal {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: rgba(0, 0, 0, 0.315);
-
-//   .container {
-//     p {
-//       color: black;
-//       margin-bottom: 30px;
-//       opacity: 1;
-//     }
-//     a {
-//       color: orange;
-//       text-align: center;
-//       text-decoration: none;
-//       text-transform: uppercase;
-//     }
-//   }
-// }
-
-// <div className={classes.modal}>
-//             <div className={classes.container}>
-//               <p>This was only a test</p>
-//               <Link to="/">go homepage</Link>
-//             </div>
-//           </div>
-
 .container {
   padding: 54px 48px;
   background: #ffffff;
@@ -102,14 +69,6 @@
           letter-spacing: -0.25px;
           text-align: left;
           margin-right: 16px;
-
-          // &:valid {
-          //   outline: 1px solid #cfcfcf;
-          // }
-
-          // &:invalid {
-          //   outline: 1px solid red;
-          // }
         }
       }
     }
@@ -134,41 +93,3 @@
     }
   }
 }
-// <form className={classes.container}>
-//       <h3>Checkout</h3>
-//       <div className={classes.billing}>
-//         <h4>Billing details</h4>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//       </div>
-
-//       <div className={classes.shipping}>
-//         <h4>Shipping info</h4>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//         <div className={classes["input-container"]}>
-//           <label htmlFor="name">Name</label>
-//           <input type="text" />
-//         </div>
-//       </div>
-//     </form>

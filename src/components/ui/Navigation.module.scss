@@ -9,6 +9,47 @@
   left: 0;
   right: 0;
   z-index: 3;
+
+  .logo {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2px;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    margin-right: auto;
+
+    li {
+      a,
+      button {
+        color: #7d828f;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: left;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      &.login {
+        a,
+        button {
+          text-transform: uppercase;
+          color: orange;
+        }
+      }
+    }
+  }
 }
 
 .updated {
@@ -21,43 +62,6 @@
   color: white;
   text-align: center;
   text-transform: uppercase;
-}
-
-.navigation .logo {
-  color: #fff;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 48px;
-  letter-spacing: -2px;
-  text-align: left;
-  text-decoration: none;
-}
-
-.navigation ul {
-  display: flex;
-  gap: 60px;
-  list-style: none;
-  margin-right: auto;
-}
-
-.navigation li a,
-.navigation li button {
-  color: #7d828f;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 0px;
-  text-align: left;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.navigation li.login a,
-.navigation li.login button {
-  text-transform: uppercase;
-  color: orange;
 }
 
 .cart {
@@ -141,6 +145,8 @@
     justify-content: flex-end;
     align-items: center;
     z-index: 1000;
+    background-color: transparent;
+    border: none;
 
     .logo {
       color: orange;
@@ -221,19 +227,3 @@
     top: 0px;
   }
 }
-
-// <nav className={classes.navigation}>
-//   <Link to="/">Logo</Link>
-//   <ul>
-//     <li>
-//       <Link to="link1">Link1</Link>
-//     </li>
-//     <li>
-//       <Link to="link1">Link1</Link>
-//     </li>
-//     S
-//     <li>
-//       <Link to="link1">Link1</Link>
-//     </li>
-//   </ul>
-// </nav>
