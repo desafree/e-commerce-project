@@ -1,9 +1,9 @@
 import { FC, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./Cart.module.scss";
-import store from "../typescript/interface/store";
-import cartStore from "../typescript/interface/cartStore";
-import { cartActions } from "../redux/cartSlice";
+import store from "../../typescript/interface/store";
+import cartStore from "../../typescript/interface/cartStore";
+import { cartActions } from "../../redux/cartSlice";
 import React from "react";
 import CartIntro from "./CartIntro";
 import CartProducts from "./CartProducts";

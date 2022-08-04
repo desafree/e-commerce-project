@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./Navigation.module.scss";
 import { createPortal } from "react-dom";
-import Cart from "../Cart";
+import Cart from "../shared/Cart";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import store from "../../typescript/interface/store";

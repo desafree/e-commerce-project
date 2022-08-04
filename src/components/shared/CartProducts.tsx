@@ -1,6 +1,6 @@
 import CartItem from "./CartItem";
 import classes from "./Cart.module.scss";
-import cartItem from "../typescript/interface/cartItem";
+import cartItem from "../../typescript/interface/cartItem";
 import { FC } from "react";
 
 interface Props {

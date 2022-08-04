@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../../redux/authSlice";
 import { cartActions } from "../../redux/cartSlice";
 import { createPortal } from "react-dom";
-import Cart from "../Cart";
+import Cart from "../shared/Cart";
 
 const NavigationMobile = () => {
   const [activateNav, setActivateNav] = useState(false);

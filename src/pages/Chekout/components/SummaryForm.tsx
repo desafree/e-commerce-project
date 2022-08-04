@@ -1,8 +1,8 @@
 import classes from "./SummaryForm.module.scss";
 import SummaryItem from "./SummaryItem";
 import { useSelector } from "react-redux";
-import store from "../typescript/interface/store";
-import cartStore from "../typescript/interface/cartStore";
+import store from "../../../typescript/interface/store";
+import cartStore from "../../../typescript/interface/cartStore";
 
 const SummaryForm = () => {
   const cart: cartStore = useSelector((state: store) => state.cart);

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useDispatch } from "react-redux";
-import cartItem from "../typescript/interface/cartItem";
+import cartItem from "../../typescript/interface/cartItem";
 import classes from "./CartItem.module.scss";
-import { cartActions } from "../redux/cartSlice";
+import { cartActions } from "../../redux/cartSlice";
 
 interface Props {
   item: cartItem;

@@ -1,6 +1,6 @@
-import ProductObj from "../../components/ProductObj";
-import ProductIntro from "../../components/ProductIntro";
-import ProductFeatures from "../../components/ProductFeatures";
+import ProductObj from "./components/ProductObj";
+import ProductIntro from "./components/ProductIntro";
+import ProductFeatures from "./components/ProductFeatures";
 import Footer from "../../components/ui/Footer";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";

@@ -1,5 +1,5 @@
 import classes from "./ProductObj.module.scss";
-import product from "../typescript/interface/product";
+import product from "../../../typescript/interface/product";
 import { FC } from "react";
 import ProductGallery from "./ProductGallery";
 import ProductText from "./ProductText";

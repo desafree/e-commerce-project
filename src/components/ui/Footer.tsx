@@ -1,5 +1,5 @@
 import classes from "./Footer.module.scss";
-import Disclaimer from "../Disclaimer";
+import Disclaimer from "../shared/Disclaimer";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

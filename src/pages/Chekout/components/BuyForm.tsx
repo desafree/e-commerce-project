@@ -2,7 +2,7 @@ import classes from "./BuyForm.module.scss";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from "react-dom";
-import Loading from "./ui/Loading";
+import Loading from "../../../components/ui/Loading";
 import SubformCheckout from "./SubformCheckout";
 import SubformShipping from "./SubformShipping";
 

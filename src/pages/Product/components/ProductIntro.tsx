@@ -1,6 +1,6 @@
 import { FC } from "react";
 import classes from "./ProductIntro.module.scss";
-import product from "../typescript/interface/product";
+import product from "../../../typescript/interface/product";
 
 interface Props {
   item: product[];

@@ -1,5 +1,5 @@
 import classes from "./ProductObj.module.scss";
-import product from "../typescript/interface/product";
+import product from "../../../typescript/interface/product";
 import { FC, useState } from "react";
 
 interface Props {

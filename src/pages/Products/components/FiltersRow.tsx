@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import SearchBar from "./ui/SearchBar";
+import SearchBar from "../../../components/ui/SearchBar";
 import Filters from "./Filters";
 import classes from "./FiltersRow.module.scss";
 import { FC } from "react";

@@ -1,14 +1,14 @@
 import classes from "./Products.module.scss";
 import useFetch from "../../hooks/useFetch";
-import FilterRow from "../../components/FiltersRow";
-import ProductList from "../../components/ProductList";
+import FilterRow from "./components/FiltersRow";
+import ProductList from "./components/ProductList";
 import Footer from "../../components/ui/Footer";
 import React from "react";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import ActiveFilters from "../../components/ActiveFilters";
-import Pagination from "../../components/Pagination";
+import ActiveFilters from "./components/ActiveFilters";
+import Pagination from "./components/Pagination";
 
 const Products = () => {
   useScrollToTop();

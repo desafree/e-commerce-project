@@ -1,5 +1,4 @@
 import classes from "./SectionCategory.module.scss";
-
 import Category from "./Category";
 
 const SectionCategory = () => {

@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import classes from "./ProductObj.module.scss";
 import { FC, useState } from "react";
-import { cartActions } from "../redux/cartSlice";
-import product from "../typescript/interface/product";
+import { cartActions } from "../../../redux/cartSlice";
+import product from "../../../typescript/interface/product";
 
 interface Props {
   product: product;

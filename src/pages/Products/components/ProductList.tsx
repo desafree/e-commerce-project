@@ -1,10 +1,10 @@
 import classes from "./ProductList.module.scss";
 import ProductListItem from "./ProductListItem";
-import Loading from "./ui/Loading";
+import Loading from "../../../components/ui/Loading";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 
-import product from "../typescript/interface/product";
+import product from "../../../typescript/interface/product";
 import { FC } from "react";
 
 interface Props {

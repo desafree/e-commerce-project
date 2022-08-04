@@ -1,5 +1,4 @@
 import classes from "./Header.module.scss";
-// import Button from "./ui/Button";
 import { Link } from "react-router-dom";
 
 const Header = () => {

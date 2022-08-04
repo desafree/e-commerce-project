@@ -1,6 +1,6 @@
-import Input from "./ui/Input";
+import Input from "../../../components/ui/Input";
 import classes from "./BuyForm.module.scss";
-import checkValidityObj from "../helpers/checkValidation";
+import checkValidityObj from "../../../helpers/checkValidation";
 
 const SubformShipping = () => {
   return (

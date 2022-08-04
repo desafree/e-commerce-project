@@ -1,8 +1,8 @@
 import classes from "./Cart.module.scss";
 import { Link } from "react-router-dom";
-import cartStore from "../typescript/interface/cartStore";
-import store from "../typescript/interface/store";
-import auth from "../typescript/interface/auth";
+import cartStore from "../../typescript/interface/cartStore";
+import store from "../../typescript/interface/store";
+import auth from "../../typescript/interface/auth";
 import { useSelector } from "react-redux";
 import { FC } from "react";
 
