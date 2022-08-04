@@ -9,18 +9,18 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import ActiveFilters from "../../components/ActiveFilters";
 import Pagination from "../../components/Pagination";
-// import products from "../../typescript/interface/products";
-// import { useSelector } from "react-redux";
-// import store from "../../typescript/interface/store";
 
 const Products = () => {
   useScrollToTop();
-  // const products: products = useSelector((state: store) => state.products);
-  // console.log(products);
-
+  const { loading, error, data } = useFetch(
+    "https://e-commerce-c8199-default-rtdb.europe-west1.firebasedatabase.app/products/-N7uYvOjW-UAMzhs8Mn0.json"
+  );
   const search = useLocation().search;
   const params = new URLSearchParams(search);
   let category = params.get("category");
+
+  const [filterCategory, setFilterCategory] = useState(category || "");
+  const [searchValue, SetSearchValue] = useState("");
 
   if (category === "solid") {
     category = "SOLID COLOR";
@@ -31,12 +31,6 @@ const Products = () => {
   } else {
     category = "";
   }
-
-  const { loading, error, data } = useFetch(
-    "https://e-commerce-c8199-default-rtdb.europe-west1.firebasedatabase.app/products/-N7uYvOjW-UAMzhs8Mn0.json"
-  );
-  const [searchValue, SetSearchValue] = useState("");
-  const [filterCategory, setFilterCategory] = useState(category);
 
   const handleFilterCategory = (category: string) => {
     setFilterCategory(category);
