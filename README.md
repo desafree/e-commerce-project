@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# E-commerce personal project by Nicola De Sanctis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created only for practice. The payment functionality is currently not available. All the images in the website were taken from unsplash (https://unsplash.com/@quokkabottle)
 
-## Available Scripts
+## Tech used
 
-In the project directory, you can run:
+For this project I used React, Redux, Typescript, SASS, CSS Modules, GSAP, and Firebase as RealTIme Database + Authentication
 
-### `npm start`
+<!-- ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -43,4 +43,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
