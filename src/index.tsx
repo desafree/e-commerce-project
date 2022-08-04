@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -15,7 +14,7 @@ const root = ReactDOM.createRoot(
 let persistor = persistStore(store);
 
 root.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <App />
