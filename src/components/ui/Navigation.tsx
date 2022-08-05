@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import classes from "./Navigation.module.scss";
 import { createPortal } from "react-dom";
 import Cart from "../shared/Cart";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import store from "../../typescript/interface/store";
 import auth from "../../typescript/interface/auth";
@@ -10,6 +10,7 @@ import { authActions } from "../../redux/authSlice";
 import { cartActions } from "../../redux/cartSlice";
 import cartStore from "../../typescript/interface/cartStore";
 import NavigationMobile from "./NavigationMobile";
+import gsap from "gsap";
 
 let initial = false;
 
@@ -17,6 +18,7 @@ const Navigation = () => {
   const dispatch = useDispatch();
   const [active, setActive] = useState(false);
   const [cartUpdated, setCartUpdated] = useState(false);
+  const cartInfo = useRef(null);
   const auth: auth = useSelector((state: store) => state.auth);
   const cart: cartStore = useSelector((state: store) => state.cart);
   const numberOfItems = cart.cart.length;
@@ -33,6 +35,14 @@ const Navigation = () => {
 
     return () => {
       clearTimeout(timeout);
+    };
+  }, [cart.cart]);
+
+  useLayoutEffect(() => {
+    const animation = gsap.from(cartInfo.current, { opacity: 0, y: 5 });
+
+    return () => {
+      animation.kill();
     };
   }, [cart.cart]);
 
@@ -70,7 +80,7 @@ const Navigation = () => {
         </ul>
         <button className={classes.cart} onClick={handleClick}>
           <img src="/assets/icons/cart.svg" alt="" />
-          {numberOfItems > 0 ? <span>{numberOfItems}</span> : ""}
+          {numberOfItems > 0 ? <span ref={cartInfo}>{numberOfItems}</span> : ""}
         </button>
       </nav>
       {cartUpdated && <div className={classes.updated}>Cart updated</div>}

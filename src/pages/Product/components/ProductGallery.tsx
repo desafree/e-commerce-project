@@ -1,13 +1,22 @@
 import classes from "./ProductObj.module.scss";
 import product from "../../../typescript/interface/product";
-import { FC, useState } from "react";
-
+import { FC, useLayoutEffect, useRef, useState } from "react";
+import gsap from "gsap";
 interface Props {
   product: product;
 }
 
 const ProductGallery: FC<Props> = ({ product }) => {
   const [activeImg, setActiveImg] = useState(product.img[0]);
+  const imgActive = useRef(null);
+
+  useLayoutEffect(() => {
+    const animation = gsap.from(imgActive.current, { scale: 0.7, opacity: 0 });
+
+    return () => {
+      animation.kill();
+    };
+  }, [activeImg]);
 
   const onClickHandler = (index: number) => {
     setActiveImg(product.img[index]);
@@ -20,6 +29,7 @@ const ProductGallery: FC<Props> = ({ product }) => {
         style={{
           backgroundImage: `url(/${activeImg})`,
         }}
+        ref={imgActive}
       ></div>
       <div className={classes.gallery}>
         {product.img.map((imgUrl, index) => {

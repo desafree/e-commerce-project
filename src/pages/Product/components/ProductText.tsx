@@ -1,6 +1,10 @@
 import classes from "./ProductObj.module.scss";
 import product from "../../../typescript/interface/product";
 import { FC } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Props {
   product: product;
@@ -8,7 +12,7 @@ interface Props {
 
 const ProductText: FC<Props> = ({ product }) => {
   return (
-    <>
+    <div>
       <h5>{product.categoryName}</h5>
       <h2>{product.itemName}</h2>
       <p>{product.itemIntro}</p>
@@ -19,7 +23,7 @@ const ProductText: FC<Props> = ({ product }) => {
         </div>
         <h6>${product.itemPrice.retail}</h6>
       </div>
-    </>
+    </div>
   );
 };
 

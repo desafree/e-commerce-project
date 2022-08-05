@@ -1,11 +1,38 @@
 import classes from "./SectionText.module.scss";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SectionText = () => {
+  const container = useRef(null);
+  const text = useRef(null);
+  const imgContainer = useRef(null);
+  const q = gsap.utils.selector(container);
+
+  useLayoutEffect(() => {
+    const timeline = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 80%",
+        },
+      })
+      .from(q("h2"), { x: 100, opacity: 0 })
+      .from(text.current, { x: -100, opacity: 0 }, "<.2")
+      .from(imgContainer.current, { y: 100, opacity: 0 }, "<.2");
+
+    return () => {
+      timeline.kill();
+    };
+  }, []);
+
   return (
     <>
-      <section className={classes.container}>
+      <section className={classes.container} ref={container}>
         <h2>Welcome</h2>
-        <div className={classes.text}>
+        <div className={classes.text} ref={text}>
           <h4>Lorem ipsum dolor sit.</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
@@ -24,7 +51,7 @@ const SectionText = () => {
             officiis!
           </p>
         </div>
-        <div className={classes["image-container"]}></div>
+        <div className={classes["image-container"]} ref={imgContainer}></div>
       </section>
     </>
   );

@@ -1,5 +1,5 @@
 import classes from "./Navigation.module.scss";
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import auth from "../../typescript/interface/auth";
 import store from "../../typescript/interface/store";
@@ -9,12 +9,22 @@ import { authActions } from "../../redux/authSlice";
 import { cartActions } from "../../redux/cartSlice";
 import { createPortal } from "react-dom";
 import Cart from "../shared/Cart";
+import gsap from "gsap";
 
 const NavigationMobile = () => {
   const [activateNav, setActivateNav] = useState(false);
   const [active, setActive] = useState(false);
   const dispatch = useDispatch();
+  const navContainer = useRef(null);
   const auth: auth = useSelector((state: store) => state.auth);
+
+  useLayoutEffect(() => {
+    const animation = gsap.from(navContainer.current, { x: 1000 });
+
+    return () => {
+      animation.kill();
+    };
+  }, [activateNav]);
 
   const onClickHandler = () => {
     setActivateNav((prevState) => !prevState);
@@ -45,7 +55,7 @@ const NavigationMobile = () => {
           </div>
         </button>
         {activateNav && (
-          <div className={classes.open}>
+          <div className={classes.open} ref={navContainer}>
             <ul>
               <li>
                 <Link to="/" onClick={onClickHandler}>

@@ -1,9 +1,29 @@
 import classes from "./SectionCategory.module.scss";
 import Category from "./Category";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SectionCategory = () => {
+  const container = useRef(null);
+  const q = gsap.utils.selector(container);
+
+  useLayoutEffect(() => {
+    const animation = gsap.from(q("div"), {
+      opacity: 0,
+      stagger: 0.1,
+      scrollTrigger: container.current,
+    });
+
+    return () => {
+      animation.kill();
+    };
+  });
+
   return (
-    <div className={classes.container}>
+    <div className={classes.container} ref={container}>
       <Category
         title="SOLID COLOR"
         category="solid"

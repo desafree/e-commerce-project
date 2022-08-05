@@ -1,3 +1,6 @@
-.loading-container {
-  height: 100vh;
+.container {
+  overflow: hidden;
+  .loading-container {
+    height: 100vh;
+  }
 }

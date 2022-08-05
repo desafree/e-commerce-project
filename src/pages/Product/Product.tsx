@@ -22,7 +22,7 @@ const Product = () => {
   });
 
   return (
-    <>
+    <div className={classes.container}>
       {loading && <Loading></Loading>}
       {loading && <div className={classes["loading-container"]}></div>}
       {!loading && !error && data.length > 0 && (
@@ -35,7 +35,7 @@ const Product = () => {
         <ProductIntro item={item}></ProductIntro>
       )}
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 
