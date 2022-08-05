@@ -39,7 +39,11 @@ const Navigation = () => {
   }, [cart.cart]);
 
   useLayoutEffect(() => {
-    const animation = gsap.from(cartInfo.current, { opacity: 0, y: 5 });
+    const animation = gsap.fromTo(
+      cartInfo.current,
+      { opacity: 0, y: 5 },
+      { opacity: 1, y: 0 }
+    );
 
     return () => {
       animation.kill();

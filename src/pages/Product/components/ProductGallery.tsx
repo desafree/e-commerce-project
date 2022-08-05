@@ -11,7 +11,11 @@ const ProductGallery: FC<Props> = ({ product }) => {
   const imgActive = useRef(null);
 
   useLayoutEffect(() => {
-    const animation = gsap.from(imgActive.current, { scale: 0.7, opacity: 0 });
+    const animation = gsap.fromTo(
+      imgActive.current,
+      { scale: 0.7, opacity: 0 },
+      { scale: 1, opacity: 1 }
+    );
 
     return () => {
       animation.kill();

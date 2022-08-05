@@ -20,7 +20,12 @@ const ProductList: FC<Props> = ({ loading, error, data: products }) => {
   const q = gsap.utils.selector(container);
 
   useLayoutEffect(() => {
-    gsap.from(q("a"), { opacity: 0, x: -20, stagger: 0.1 });
+    gsap.fromTo(
+      q("a"),
+      1,
+      { opacity: 0, x: -20, stagger: 0.1 },
+      { opacity: 1, x: 0, stagger: 0.1 }
+    );
   }, [products]);
 
   return (
