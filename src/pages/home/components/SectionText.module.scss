@@ -24,7 +24,7 @@
 }
 
 .container .text h4 {
-  margin-bottom: 43px;
+  margin-bottom: 20px;
   font-size: 72px;
   font-weight: 700;
   line-height: 64px;
@@ -87,16 +87,19 @@
 
 @media only screen and (max-width: 800px) {
   .container {
-    margin: 150px 50px;
+    margin: 100px 50px 150px;
 
     h2 {
       display: none;
-      font-size: 54px;
-      line-height: 54px;
     }
 
     .text {
       margin-top: 0;
+
+      h4 {
+        font-size: 56px;
+        line-height: 60px;
+      }
     }
   }
 }

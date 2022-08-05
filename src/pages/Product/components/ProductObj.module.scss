@@ -11,7 +11,6 @@
   .images {
     .image-container {
       margin-bottom: 30px;
-      border-radius: 15px;
       width: 445px;
       height: 445px;
       background-position: center;
@@ -26,7 +25,6 @@
       max-width: 445px;
 
       img {
-        border-radius: 10px;
         height: 88px;
         width: 88px;
 
@@ -95,7 +93,6 @@
           text-align: left;
           padding: 4px 10px;
           background: #ffeee2;
-          border-radius: 6px;
           margin-bottom: 0;
         }
       }
@@ -123,7 +120,6 @@
       align-items: center;
       justify-content: space-around;
       background: #f6f8fd;
-      border-radius: 10px;
 
       button {
         background-color: transparent;
@@ -146,7 +142,6 @@
       padding: 20px 77px;
       background: orange;
       box-shadow: 0px 20px 50px -20px #ff7e1b;
-      border-radius: 10px;
       border: none;
       display: flex;
       align-items: center;
@@ -176,8 +171,26 @@
 
 @media only screen and (max-width: 1200px) {
   .container {
-    flex-direction: column;
     margin: 200px 100px 200px;
+    gap: 100px;
+
+    .images {
+      .image-container {
+        width: 350px;
+        height: 330px;
+      }
+
+      .gallery {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
 
     .cart-actions {
       flex-direction: row;
@@ -196,15 +209,13 @@
 
 @media only screen and (max-width: 800px) {
   .container {
-    margin: 150px 50px 150px;
-
-    .cart-actions {
-      flex-direction: column;
-    }
+    margin: 120px 50px 150px;
+    flex-direction: column;
+    gap: 50px;
 
     .images {
       .image-container {
-        width: 100%;
+        max-width: 450px;
         height: 330px;
       }
 
@@ -217,6 +228,53 @@
           height: 60px;
           width: 60px;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    .images {
+      .image-container {
+        width: 100%;
+      }
+    }
+
+    .cart-actions {
+      .addCart {
+        height: 80px;
+        padding: 20px;
+        background: orange;
+        box-shadow: 0px 20px 50px -20px #ff7e1b;
+        border: none;
+        display: initial;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+      }
+    }
+
+    .text {
+      h5 {
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 27px;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .price {
+        margin-bottom: 30px;
       }
     }
   }

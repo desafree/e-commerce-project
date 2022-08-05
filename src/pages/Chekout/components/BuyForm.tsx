@@ -36,9 +36,9 @@ const BuyForm = () => {
         <SubformShipping></SubformShipping>
 
         <p>
-          The ‘Cash on Delivery’ option enables you to pay in cash when our
-          delivery courier arrives at your residence. Just make sure your
-          address is correct so that your order will not be cancelled.
+          This payment is not real, the site currently has not a payment
+          functionality available. This site is just a demo used as a personal
+          project, If you need to contact me check the links below!
         </p>
       </form>
     </>

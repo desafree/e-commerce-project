@@ -7,7 +7,6 @@
   .login {
     padding: 32px;
     background: #fff;
-    border-radius: 20px;
     max-width: 400px;
     position: absolute;
     top: 50%;
@@ -22,6 +21,7 @@
 
     .enter-button {
       cursor: pointer;
+      border: none;
     }
 
     h3 {
@@ -52,8 +52,6 @@
       width: 100%;
       padding: 15px;
       background: #000;
-      border-radius: 6px;
-      //styleName: Body (M);
       color: white;
       font-size: 15px;
       font-weight: 300;
@@ -64,7 +62,6 @@
     }
 
     p {
-      //styleName: Body (M);
       text-align: center;
       color: #000;
       font-size: 15px;
@@ -77,8 +74,6 @@
         width: initial;
         padding: 0px;
         background: transparent;
-        border-radius: 0;
-        //styleName: Body (M);
         color: orange;
         font-size: 15px;
         font-weight: 300;

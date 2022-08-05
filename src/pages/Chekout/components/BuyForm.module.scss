@@ -75,6 +75,31 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 520px;
+
+    .billing,
+    .shipping {
+      .inputs-container {
+        .input-container {
+          flex-basis: 45%;
+          flex-grow: 1;
+          margin-right: 10px;
+
+          label {
+            margin-bottom: 5px;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .container {
     max-width: none;
@@ -88,7 +113,44 @@
     .billing,
     .shipping {
       .inputs-container {
-        display: initial;
+        .input-container {
+          flex-basis: 45%;
+          flex-grow: 1;
+          margin-right: 10px;
+
+          label {
+            margin-bottom: 5px;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 25px;
+    width: 100%;
+    .billing,
+    .shipping {
+      .inputs-container {
+        .input-container {
+          flex-basis: 100%;
+          flex-grow: 1;
+          margin-right: 0px;
+
+          label {
+            margin-bottom: 5px;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
       }
     }
   }

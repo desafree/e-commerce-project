@@ -39,6 +39,12 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s;
+
+        &:hover {
+          color: white;
+        }
       }
 
       &.login {
@@ -54,6 +60,7 @@
 
 .updated {
   position: fixed;
+  z-index: 100;
   top: 105px;
   left: 0;
   right: 0;

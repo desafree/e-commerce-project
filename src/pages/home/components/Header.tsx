@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <div className={classes.header}>
         <div className={classes.text}>
-          <h5>new product</h5>
+          <h5>lorem ipsum</h5>
           <h1>Lorem ipsum dolor sit.</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,

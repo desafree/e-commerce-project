@@ -13,7 +13,6 @@
       #232a34 0%,
       #181e27 100%
     );
-    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -34,7 +33,6 @@
 
     a {
       background: orange;
-      border-radius: 22.5px;
       padding: 11px;
       text-align: center;
       text-transform: uppercase;
@@ -54,7 +52,7 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
   .container {
     .thanks {
       margin: 0 30px;

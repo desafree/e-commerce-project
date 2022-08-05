@@ -19,9 +19,6 @@ const Products = () => {
   const params = new URLSearchParams(search);
   let category = params.get("category");
 
-  const [filterCategory, setFilterCategory] = useState(category || "");
-  const [searchValue, SetSearchValue] = useState("");
-
   if (category === "solid") {
     category = "SOLID COLOR";
   } else if (category === "transparent") {
@@ -31,6 +28,9 @@ const Products = () => {
   } else {
     category = "";
   }
+
+  const [filterCategory, setFilterCategory] = useState(category);
+  const [searchValue, SetSearchValue] = useState("");
 
   const handleFilterCategory = (category: string) => {
     setFilterCategory(category);
