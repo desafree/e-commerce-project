@@ -13,6 +13,9 @@ import auth from "./typescript/interface/auth";
 import Navigation from "./components/ui/Navigation";
 import PostCheckout from "./pages/PostCheckout/PostCheckout";
 import { Navigate } from "react-router-dom";
+import gsap from "gsap";
+
+gsap.config({ nullTargetWarn: false });
 
 function App() {
   const cart: cartStore = useSelector((state: store) => state.cart);
