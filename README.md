@@ -36,6 +36,6 @@ This software uses the following open source packages:
 
 [e-commerce app](https://github.com/desafree/cat-site) - CatWiki
 
-# E-commerce personal project by Nicola De Sanctis
+### Disclaimer
 
 This project was created only for practice. The payment functionality is currently not available. All the images in the website were taken from unsplash (https://unsplash.com/@quokkabottle)
